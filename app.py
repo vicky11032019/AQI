@@ -7,7 +7,7 @@ import streamlit as st
 pickle_in = open("aqi_model.pickle", "rb")
 aqi_reg=pickle.load(pickle_in)
 
-def app():
+def main():
     st.title("Air Quality Index Prediction")
     avg_temp=st.text_input("Average Temp (°C)", "type here")
     max_temp=st.text_input("Maximum Temp (°C)", "type here")
@@ -30,6 +30,6 @@ def pred_aqi(avg_temp, max_temp, min_temp, h, pp, vv, v, vm):
 
 
 if __name__=='__main__':
-    app()
+    main()
 
 
